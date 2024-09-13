@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
                 },
                 printQRInTerminal: false,
                 logger: pino({ level: "fatal" }).child({ level: "fatal" }),
-                browser: Browsers.macOS("Safari"),
+                browser: Browsers.macOS("NBT"),
             });
 
             if (!PrabathPairWeb.authState.creds.registered) {
@@ -57,7 +57,7 @@ router.get('/', async (req, res) => {
 
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
 
-                        const sid = 'QUEEN-ZAZIE-MD' + string_session;
+                        const sid = 'ZAZIE-MD~' + string_session;
 
                         const dt = await PrabathPairWeb.sendMessage(user_jid, {
                             text: sid
@@ -72,7 +72,7 @@ thumbnailUrl: "https://telegra.ph/file/e069027c2178e2c7475c9.jpg",
 sourceUrl: "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
 mediaType: 1,
 renderLargerThumbnail: true
-}}},{quoted:code })
+}}},{quoted:mek})
                     } catch (e) {
                         exec('pm2 restart prabath');
                     }
